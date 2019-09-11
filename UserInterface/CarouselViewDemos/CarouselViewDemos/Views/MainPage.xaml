@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:views="clr-namespace:CarouselViewDemos.Views"
+             x:Class="CarouselViewDemos.Views.MainPage"
+             Title="CarouselView Demos">
+    <TableView Intent="Menu">
+        <TableRoot>
+            <TableSection Title="Layout">
+                <TextCell Text="Side items"
+                          Detail="DataTemplate"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:SideItemsPage}" />
+                <TextCell Text="Horizontal list"
+                          Detail="DataTemplate"
+                          Command="{Binding NavigateCommand}"
+                          CommandParameter="{x:Type views:PeekInsetsPage}" />
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CarouselViewDemos.Views.SideItemsPage"
+             Title="CarouselView (SideItems)">
+    <StackLayout Margin="20">
+        <CarouselView ItemsSource="{Binding Monkeys}" HeightRequest="125" NumberOfSideItems="1">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Frame BorderColor="Black">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="1"
+                            Text="{Binding Name}"
+                            FontAttributes="Bold"
+                            FontSize="14"/>
+                            <Label Grid.Row="1"
+                            Grid.Column="1"
+                            Text="{Binding Location}"
+                            FontAttributes="Italic"
+                            FontSize="12"
+                            VerticalOptions="End" />
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+    </StackLayout>
+</ContentPage>
